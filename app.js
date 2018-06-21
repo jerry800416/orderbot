@@ -13,7 +13,7 @@ server.listen(process.env.port || process.env.PORT || "3978",function(){
 // 建立微軟連線帳密
 var connector = new builder.ChatConnector({
     appId:process.env.MicrosoftAppId,
-    appPassword:process.env.MicrosoftAppPassword
+    appPassword:process.env.MicrosoftAppPassword,
 });
 server.post('/api/messages',connector.listen());
 
